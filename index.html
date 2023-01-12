@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+
+
+
+<body>
+
+
+<script>
+function selected(id)
+{
+    var hider = document.getElementsByTagName("code");
+
+    for (var i = 0; i < hider.length; i++)
+    {
+        hider[i].style.display = "none";
+    }
+    var div_to_display = document.getElementById(id);
+    div_to_display.style.display = "block";
+}
+</script>
+
+    <select name="" onchange="selected(this.value);">
+        <option value=""> Select an Event</option>
+        <option value="GV"> Global Variables</option>
+        <option value="GVP"> Global Variables for Ecommerce</option>
+        <option value="RSA"> Registration Attempt</option>
+        <option value="RSF"> GRegistration Fail</option>
+        <option value="RSS"> Registration Success</option>
+        <option value="LSA"> Login Attempt</option>
+        <option value="LSF"> Login Fail</option>
+        <option value="LSS"> Login Success</option>
+        <option value="NSS"> Newsletter Success </option>
+        <option value="MN"> Main navigation</option>
+        <option value="FN"> Footer navigation</option>
+        <option value="CS"> Country switch</option>
+        <option value="S"> search</option>
+        <option value="SM"> Social media company</option>
+        <option value="CU"> Contact us success</option>
+        <option value="sort"> Sort by</option>
+        <option value="F"> Filter</option>
+        <option value="carousel"> Carousel</option>
+        <option value="VIT"> Ecommerce product impression</option>
+        <option value="SI"> Ecommerce product click</option>
+        <option value="VI"> Ecommerce product details</option>
+        <option value="ATC"> Ecommerce add to cart</option>
+        <option value="RFC"> Ecommerce remove from cart</option>
+        <option value="BC"> Ecommerce checkout - your details</option>
+        <option value="ASI"> Ecommerce checkout - add shipping info</option>
+        <option value="SD"> Ecommerce checkout - shipping details</option>
+        <option value="payment"> Ecommerce checkout - payment</option>
+        <option value="viewP"> Ecommerce order confirmation</option>
+        <option value="SP"> Ecommerce select Promotion</option>
+        <option value="viewP"> Ecommerce View Promotion</option>
+        <option value="SC"> Sub  category</option>
+    </select>
+   
+    <code contenteditable="true" id="GV" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'login_status' : '<span id="values"><span><<</span>login status>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'user_type' : '<span id="values"><span><<</span>user type>></span>',  <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'user_id' : '<span id="values"><span><<</span>user id>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'sha256_email' :'<span id="values"><span><<</span>hashed email address>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'sha256_phone_number' : '<span id="values"><span><<</span>hashed phone number>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'email_address' : '<span id="values"><span><<</span>email address>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'phone_number' : '<span id="values"><span><<</span>phone number>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'has_purchased' : '<span id="values"><span><<</span>customer has purchased>></span>',<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'page_category' : '<span id="values"><span id="values"></span><span><<</span>page category>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'site_language' : '<span id="values"><span><<</span>site language>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'site_country' : '<span id="values"><span><<</span>site country>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'site_environment' : '<span id="values"><span><<</span>site environment>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="GVP" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'login_status' : '<span id="values"><span><<</span>login status>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'user_type' : '<span id="values"><span><<</span>user type>></span>',  <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'user_id' : '<span id="values"><span><<</span>user id>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'sha256_email' :'<span id="values"><span><<</span>hashed email address>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'sha256_phone_number' : '<span id="values"><span><<</span>hashed phone number>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'email_address' : '<span id="values"><span><<</span>email address>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'phone_number' : '<span id="values"><span><<</span>phone number>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'has_purchased' : '<span id="values"><span><<</span>customer has purchased>></span>',<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'page_category' : '<span id="values"><span id="values"></span><span><<</span>page category>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'site_language' : '<span id="values"><span><<</span>site language>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'site_country' : '<span id="values"><span><<</span>site country>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'site_environment' : '<span id="values"><span><<</span>site environment>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Variables specific for product details pages.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'product_name': '<span id="values"><span><<</span>product name>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'product_id': '<span id="values"><span><<</span>product id>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'product_category': '<span id="values"><span><<</span>product category>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'product_is_available': '<span id="values"><span><<</span>product availability>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'product_is_new': '<span id="values"><span><<</span>product is new>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'product_on_sale': '<span id="values"><span><<</span>product is on sale>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'product_price': '<span id="values"><span><<</span>product price>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'product_original_price': '<span id="values"><span><<</span>product original price>></span>',<br> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'product_discount_value': '<span id="values"><span><<</span>product discount value>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'product_currency': '<span id="values"><span><<</span>currency code>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Variables specific for category pages.<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'category_name': '<span id="values"><span><<</span>category name>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'category_id': '<span id="values"><span><<</span>category id>></span>', <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'sub_category_name': '<span id="values"><span><<</span>subcategory name>></span>',<br> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'sub_category_id': '<span id="values"><span><<</span>subcategory id>></span>' <br>
+        });<br>
+        <span><</span>script<span>></span>
+    </code>
+
+    <code id="RSF" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({
+          &nbsp;&nbsp; 'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'status' : 'Submit Fail'</span>,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'form_field' : '<span id="values"><span><<</span>form field>></span>'<br>
+            &nbsp;&nbsp;},<br>
+            &nbsp;&nbsp;_clear: true,<br>
+            &nbsp;&nbsp;'event' : 'registration'<br>
+        });<br>
+        <span><</span>script<span>></span>
+    </code>
+
+    <code id="RSA" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'status' : 'Submit Attempt',<br>
+            &nbsp;&nbsp;},<br>
+            &nbsp;&nbsp; _clear: true,<br>
+            &nbsp;&nbsp;'event' : 'registration'<br>
+            });<br>            
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="RSS" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'status' : 'Submit Success',<br>
+            &nbsp;&nbsp; },<br>
+            &nbsp;&nbsp;_clear: true,<br>
+            &nbsp;&nbsp; 'event' : 'registration'<br>
+            });<br>                    
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="LSA" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp; 'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'status' : 'Submit Attempt',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'platform' : '<span id="values"><span><<</span>platform>></span>'<br>
+            &nbsp;&nbsp;},<br>
+            &nbsp;&nbsp;_clear: true,<br>
+            &nbsp;&nbsp; 'event' : 'login'<br>
+            });<br>                  
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="LSF" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'status' : 'Submit Fail',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'platform' : '<span id="values"><span><<</span>platform>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'error_message' : '<span id="values"><span><<</span>error message>></span>'<br>
+            &nbsp;&nbsp; },<br>
+            &nbsp;&nbsp; _clear: true,<br>
+            &nbsp;&nbsp; 'event' : 'login'<br>
+            });<br>                
+        <span><</span>script<span>></span>
+    </code>
+
+    <code id="LSS" style="display: none;">
+      <span><</span>script<span>></span><br>
+      window.dataLayer = window.dataLayer || [];<br>
+      dataLayer.push({<br>
+        &nbsp;&nbsp; 'data' : {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;'status' : 'Submit Success',<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;'platform' : '<span id="values"><span><<</span>platform>></span>'<br>
+          &nbsp;&nbsp; },<br>
+          &nbsp;&nbsp;_clear: true,<br>
+          &nbsp;&nbsp; 'event' : 'login'<br>
+          });<br>                  
+      <span><</span>script<span>></span>
+  </code>
+
+    <code id="NSS" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;  'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;    'status' : 'Submit Success',<br>
+            &nbsp;&nbsp;  },<br>
+            &nbsp;&nbsp; _clear: true,<br>
+            &nbsp;&nbsp; 'event' : 'newsletter'<br>
+            });<br>                     
+        <span><</span>script<span>></span>
+    </code>
+
+    <code id="MN" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'name' : '<span id="values"><span><<</span>cta name>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'id': '<span id="values"><span><<</span>cta id>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'referring_page' : '<span id="values"><span><<</span>referring page>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'destination_page' : '<span id="values"><span><<</span>destination page>></span>'<br>
+            &nbsp;&nbsp; },<br>
+            &nbsp;&nbsp; _clear: true,<br>
+            &nbsp;&nbsp; 'event' : 'main_navigation'<br>
+            });<br>               
+        <span><</span>script<span>></span>
+    </code>
+
+    <code id="FN" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp; 'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'name' : '<span id="values"><span><<</span>cta name>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'id': '<span id="values"><span><<</span>cta id>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'referring_page' : '<span id="values"><span><<</span>referring page>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'destination_page' : '<span id="values"><span><<</span>destination page>></span>'<br>
+            &nbsp;&nbsp; },<br>
+            &nbsp;&nbsp; _clear: true,<br>
+            &nbsp;&nbsp; 'event' : 'footer_navigation'<br>
+            });<br>                  
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="CS" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'from_country' : '<span id="values"><span><<</span>from country>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'to_country': '<span id="values"><span><<</span>to country>></span>'<br>
+            &nbsp;&nbsp; },<br>
+            &nbsp;&nbsp; _clear: true,<br>
+            &nbsp;&nbsp;  'event' : 'country_switch'<br>
+            }); <br>                    
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="S" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp; 'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;   'type' : '<span id="values"><span><<</span>search type>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;  'search_term': '<span id="values"><span><<</span>search term>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;  'result_count': '<span id="values"><span><<</span>result count>></span>',<br>
+            &nbsp;&nbsp; },<br>
+            &nbsp;&nbsp;  _clear: true,<br>
+            &nbsp;&nbsp;  'event' : 'search'<br>
+            }); <br>                
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="SM" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'type' : 'Company',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'platform': '<span id="values"><span><<</span>platform>></span>'<br>
+            &nbsp;&nbsp; },<br>
+            &nbsp;&nbsp; _clear: true,<br>
+            &nbsp;&nbsp; 'event' : 'social_media'<br>
+            }); <br>                 
+        <span><</span>script<span>></span>
+    </code>
+
+    <code id="CU" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; 'status' : 'Submit Success',<br>   
+            &nbsp;&nbsp; },<br>
+            &nbsp;&nbsp; _clear: true,<br>
+            &nbsp;&nbsp; 'event' : 'contact_us'<br>
+            }); <br>                  
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="sort" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;   'name': '<span id="values"><span><<</span>sort by value>></span>'<br>
+            &nbsp;&nbsp; },<br>
+            &nbsp;&nbsp;  _clear: true,<br>
+            &nbsp;&nbsp;  'event' : 'sort'<br>
+            }); <br>                  
+        <span><</span>script<span>></span>
+    </code>
+
+    <code id="F" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp; 'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;  'filter': '<span id="values"><span><<</span>filter name>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;  'name': '<span id="values"><span><<</span>filter value>></span>'<br>
+            &nbsp;&nbsp; },<br>
+            &nbsp;&nbsp; _clear: true,<br>
+            &nbsp;&nbsp; 'event' : 'filter'<br>
+            }); <br>                    
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="carousel" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp; 'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;  'name': '<span id="values"><span><<</span>image>></span>'<br>
+            &nbsp;&nbsp; },<br>
+            &nbsp;&nbsp; _clear: true,<br>
+            &nbsp;&nbsp;  'event' : 'carousel'<br>
+            }); <br>                    
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="VIT" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'event' : 'view_item_list',<br>
+          &nbsp;&nbsp;'ecommerce': {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'currency': '<span id="values"><span><<</span>currency code>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'items': [<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_name': '<span id="values"><span><<</span>item name>></span>',<br> 
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_id': '<span id="values"><span><<</span>item id>></span>',<br> 
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'price': '<span id="values"><span><<</span>item price>></span>', <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_brand': '<span id="values"><span><<</span>item brand>></span>',<br> 
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category': '<span id="values"><span><<</span>item category>></span>',<br> 
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_list_name': '<span id="values"><span><<</span>item list>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'index': '<span id="values"><span><<</span>item position>></span>', <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Additional item variables<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category2': '<span id="values"><span><<</span>item is new>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category3': '<span id="values"><span><<</span>item is on sale>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category4': '<span id="values"><span><<</span>item original price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'discount': '<span id="values"><span><<</span>item discount value>></span>'<br>
+              &nbsp;&nbsp;&nbsp;&nbsp; },<br>
+              &nbsp;&nbsp;&nbsp;&nbsp; {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_name': '<span id="values"><span><<</span>item name>></span>',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_id': '<span id="values"><span><<</span>item id>></span>',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'price': '<span id="values"><span><<</span>item price>></span>',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_brand': '<span id="values"><span><<</span>item brand>></span>',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category': '<span id="values"><span><<</span>item category>></span>',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_list_name': '<span id="values"><span><<</span>item list>></span>',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'index': '<span id="values"><span><<</span>item position>></span>',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Additional item variables<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category2': '<span id="values"><span><<</span>item is new>></span>',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category3': '<span id="values"><span><<</span>item is on sale>></span>',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category4': '<span id="values"><span><<</span>item original price>></span>',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'discount': '<span id="values"><span><<</span>item discount value>></span>'<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}]<br>
+                &nbsp;&nbsp;}<br>
+});<br>
+      
+        <span><</span>script<span>></span>
+    </code>
+
+    <code id="SI" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        &nbsp;&nbsp;dataLayer.push({<br>
+          &nbsp;&nbsp;'event': 'select_item',<br>
+          &nbsp;&nbsp;'ecommerce': {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'currency': '<span id="values"><span><<</span>currency code>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'items': [{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_name': '<span id="values"><span><<</span>item name>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_id': '<span id="values"><span><<</span>item id>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'price': '<span id="values"><span><<</span>item price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_brand': '<span id="values"><span><<</span>item brand>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category': '<span id="values"><span><<</span>item category>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_list_name': '<span id="values"><span><<</span>item list>></span>', <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'index': '<span id="values"><span><<</span>item position>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Additional item variables<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category2': '<span id="values"><span><<</span>item is new>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category3': '<span id="values"><span><<</span>item is on sale>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category4': '<span id="values"><span><<</span>item original price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'discount': '<span id="values"><span><<</span>item discount value>></span>'<br>
+              &nbsp;&nbsp;&nbsp;&nbsp; }]<br>
+              &nbsp;&nbsp;  }<br>
+});<br>
+        <span><</span>script<span>></span>
+    </code>
+    
+
+    <code id="VI" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'event': 'view_item',<br>
+          &nbsp;&nbsp;'ecommerce': {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'currency': '<span id="values"><span><<</span>currency code>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'value' : '<span id="values"><span><<</span>value>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'items': [{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_name': '<span id="values"><span><<</span>item name>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_id': '<span id="values"><span><<</span>item id>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'price': '<span id="values"><span><<</span>item price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_brand': '<span id="values"><span><<</span>item brand>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category': '<span id="values"><span><<</span>item category>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_list_name': '<span id="values"><span><<</span>item list>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'quantity': '<span id="values"><span><<</span>quantity>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'index': '<span id="values"><span><<</span>item position>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Additional item variables<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category2': '<span id="values"><span><<</span>item is new>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category3': '<span id="values"><span><<</span>item is on sale>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category4': '<span id="values"><span><<</span>item original price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'discount': '<span id="values"><span><<</span>item discount value>></span>'<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}]<br>
+              &nbsp;&nbsp;}<br>
+});<br>
+               
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="ATC" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'event': 'add_to_cart',<br>
+          &nbsp;&nbsp;'cart_type': '<span id="values"><span><<</span>cart type>></span>',<br>
+          &nbsp;&nbsp;'ecommerce': {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'currency': '<span id="values"><span><<</span>currency code>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'value' : '<span id="values"><span><<</span>value>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'items': [{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_name': '<span id="values"><span><<</span>item name>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_id': '<span id="values"><span><<</span>item id>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'price': '<span id="values"><span><<</span>item price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_brand': '<span id="values"><span><<</span>item brand>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category': '<span id="values"><span><<</span>item category>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'quantity': '<span id="values"><span><<</span>item quantity>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Additional item variables<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category2': '<span id="values"><span><<</span>item is new>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category3': '<span id="values"><span><<</span>item is on sale>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category4': '<span id="values"><span><<</span>item original price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'discount': '<span id="values"><span><<</span>item discount value>></span>'<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}]<br>
+              &nbsp;&nbsp;}<br>
+});<br>
+            
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="RFC" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'event': 'remove_from_cart',<br>
+          &nbsp;&nbsp;'ecommerce': {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'currency': '<span id="values"><span><<</span>currency code>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'value' : '<span id="values"><span><<</span>value>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'items': [{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_name': '<span id="values"><span><<</span>item name>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_id': '<span id="values"><span><<</span>item id>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'price': '<span id="values"><span><<</span>item price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_brand': '<span id="values"><span><<</span>item brand>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category': '<span id="values"><span><<</span>item category>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'quantity': '<span id="values"><span><<</span>item quantity>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Additional item variables<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category2': '<span id="values"><span><<</span>item is new>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category3': '<span id="values"><span><<</span>item is on sale>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category4': '<span id="values"><span><<</span>item original price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'discount': '<span id="values"><span><<</span>item discount value>></span>'<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}]<br>
+              &nbsp;&nbsp;}<br>
+});<br>
+           
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="BC" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'event': 'begin_checkout',<br>
+          &nbsp;&nbsp;'ecommerce': {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'currency': '<span id="values"><span><<</span>currency code>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'value' : '<span id="values"><span><<</span>value>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'items': [{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_name': '<span id="values"><span><<</span>item name>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_id': '<span id="values"><span><<</span>item id>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'price': '<span id="values"><span><<</span>item price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_brand': '<span id="values"><span><<</span>item brand>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category': '<span id="values"><span><<</span>item category>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'quantity': '<span id="values"><span><<</span>item quantity>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'order_number': '<span id="values"><span><<</span>order number>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Additional item variables<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category2': '<span id="values"><span><<</span>item is new>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category3': '<span id="values"><span><<</span>item is on sale>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category4': '<span id="values"><span><<</span>item original price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'discount': '<span id="values"><span><<</span>item discount value>></span>'<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}]<br>
+              &nbsp;&nbsp;}<br>
+});<br>
+             
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="ASI" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'event': 'add_shipping_info',<br>
+          &nbsp;&nbsp;'ecommerce': {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'currency': '<span id="values"><span><<</span>currency code>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'value' : '<span id="values"><span><<</span>value>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'coupon' : '<span id="values"><span><<</span>Coupon name>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'items': [{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_name': '<span id="values"><span><<</span>item name>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_id': '<span id="values"><span><<</span>item id>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'price': '<span id="values"><span><<</span>item price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_brand': '<span id="values"><span><<</span>item brand>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category': '<span id="values"><span><<</span>item category>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'quantity': '<span id="values"><span><<</span>item quantity>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'shipping_tier' : '<span id="values"><span><<</span>shipping tier>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Additional item variables<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category2': '<span id="values"><span><<</span>item is new>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category3': '<span id="values"><span><<</span>item is on sale>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category4': '<span id="values"><span><<</span>item original price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'discount': '<span id="values"><span><<</span>item discount value>></span>'<br>
+              &nbsp;&nbsp;&nbsp;&nbsp; }]<br>
+              &nbsp;&nbsp;}<br>
+});<br>
+               
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="SD" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'event': 'shipping_details',<br>
+          &nbsp;&nbsp;'ecommerce': {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'currency': '<span id="values"><span><<</span>currency code>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'delivery_method': '<span id="values"><span><<</span>delivery method>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'delivery_cost': '<span id="values"><span><<</span>delivery cost>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'items': [{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_name': '<span id="values"><span><<</span>item name>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_id': '<span id="values"><span><<</span>item id>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'price': '<span id="values"><span><<</span>item price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_brand': '<span id="values"><span><<</span>item brand>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category': '<span id="values"><span><<</span>item category>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'quantity': '<span id="values"><span><<</span>item quantity>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Additional item variables<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category2': '<span id="values"><span><<</span>item is new>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category3': '<span id="values"><span><<</span>item is on sale>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category4': '<span id="values"><span><<</span>item original price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'discount': '<span id="values"><span><<</span>item discount value>></span>'<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}]<br>
+              &nbsp;&nbsp;}<br>
+});<br>
+                 
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="API" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'event': 'add_payment_info',<br>
+          &nbsp;&nbsp;'ecommerce': {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'currency': '<span id="values"><span><<</span>currency code>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'value' : '<span id="values"><span><<</span>value>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'delivery_method': '<span id="values"><span><<</span>delivery method>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'delivery_cost': '<span id="values"><span><<</span>delivery cost>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'items': [{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_name': '<span id="values"><span><<</span>item name>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_id': '<span id="values"><span><<</span>item id>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'price': '<span id="values"><span><<</span>item price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_brand': '<span id="values"><span><<</span>item brand>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category': '<span id="values"><span><<</span>item category>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'quantity': '<span id="values"><span><<</span>item quantity>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Additional item variables<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category2': '<span id="values"><span><<</span>item is new>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category3': '<span id="values"><span><<</span>item is on sale>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category4': '<span id="values"><span><<</span>item original price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'discount': '<span id="values"><span><<</span>item discount value>></span>'<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}]<br>
+              &nbsp;&nbsp;}<br>
+});<br>                
+        <span><</span>script<span>></span>
+    </code>
+
+
+
+    <code id="P" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'event': 'purchase',<br>
+          &nbsp;&nbsp;'ecommerce': {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'currency': '<span id="values"><span><<</span>currency code>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'transaction_id': '<span id="values"><span><<</span>transaction id>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'value': '<span id="values"><span><<</span>transaction revenue>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'tax': '<span id="values"><span><<</span>tax amount>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'shipping': '<span id="values"><span><<</span>shipping cost>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'coupon': '<span id="values"><span><<</span>transaction coupon code>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'delivery_method': '<span id="values"><span><<</span>delivery method>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'delivery_cost': '<span id="values"><span><<</span>delivery cost>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'payment_method': '<span id="values"><span><<</span>payment method>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'items': [{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_name': '<span id="values"><span><<</span>item name>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_id': '<span id="values"><span><<</span>item id>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'price': '<span id="values"><span><<</span>item price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_brand': '<span id="values"><span><<</span>item brand>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category': '<span id="values"><span><<</span>item category>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'quantity': '<span id="values"><span><<</span>item quantity>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Additional item variables<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category2': '<span id="values"><span><<</span>item is new>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category3': '<span id="values"><span><<</span>item is on sale>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category4': '<span id="values"><span><<</span>item original price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'discount': '<span id="values"><span><<</span>item discount value>></span>'<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}]<br>
+              &nbsp;&nbsp;}<br>
+});<br>
+                   
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="viewP" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'event': 'view_promotion',<br>
+          &nbsp;&nbsp;'ecommerce': {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'currency': '<span id="values"><span><<</span>currency code>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'creative_name': '<span id="values"><span><<</span>name of creative>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'promotion_id': '<span id="values"><span><<</span>promotion id>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'promotion_name': '<span id="values"><span><<</span>promotion name>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'items': [{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_name': '<span id="values"><span><<</span>item name>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_id': '<span id="values"><span><<</span>item id>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'price': '<span id="values"><span><<</span>item price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_brand': '<span id="values"><span><<</span>item brand>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category': '<span id="values"><span><<</span>item category>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_list_name': '<span id="values"><span><<</span>item list>></span>', <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'index': '<span id="values"><span><<</span>item position>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Additional item variables<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category2': '<span id="values"><span><<</span>item is new>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category3': '<span id="values"><span><<</span>item is on sale>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category4': '<span id="values"><span><<</span>item original price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'discount': '<span id="values"><span><<</span>item discount value>></span>'<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}]<br>
+              &nbsp;&nbsp;}<br>
+});<br>
+                
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="SP" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'event': 'select_promotion',<br>
+          &nbsp;&nbsp;'ecommerce': {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'currency': '<span id="values"><span><<</span>currency code>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'creative_name': '<span id="values"><span><<</span>name of creative>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'promotion_id': '<span id="values"><span><<</span>promotion id>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'promotion_name': '<span id="values"><span><<</span>promotion name>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'items': [{<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_name': '<span id="values"><span><<</span>item name>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_id': '<span id="values"><span><<</span>item id>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'price': '<span id="values"><span><<</span>item price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_brand': '<span id="values"><span><<</span>item brand>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category': '<span id="values"><span><<</span>item category>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_list_name': '<span id="values"><span><<</span>item list>></span>', <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'index': '<span id="values"><span><<</span>item position>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Additional item variables<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category2': '<span id="values"><span><<</span>item is new>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category3': '<span id="values"><span><<</span>item is on sale>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'item_category4': '<span id="values"><span><<</span>item original price>></span>',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'discount': '<span id="values"><span><<</span>item discount value>></span>'<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;}]<br>
+              &nbsp;&nbsp;}<br>
+});<br>
+                   
+        <span><</span>script<span>></span>
+    </code>
+
+
+    <code id="SC" style="display: none;">
+        <span><</span>script<span>></span><br>
+        window.dataLayer = window.dataLayer || [];<br>
+        dataLayer.push({<br>
+          &nbsp;&nbsp;'data' : {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'name' : '<span id="values"><span><<</span>cta name>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'id': '<span id="values"><span><<</span>cta id>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'referring_page' : '<span id="values"><span><<</span>referring page>></span>',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;'destination_page' : '<span id="values"><span><<</span>destination page>></span>'<br>
+            &nbsp;&nbsp;},<br>
+            &nbsp;&nbsp; _clear: true,<br>
+            &nbsp;&nbsp;'event' : 'select_content'<br>
+            });<br>
+                          
+        <span><</span>script<span>></span>
+    </code>
+
+
+
+
+  
+    
+    
+
+
+</body>
+</html>
